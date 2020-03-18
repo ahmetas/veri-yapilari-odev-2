@@ -3,4 +3,4 @@ project(VeriYapilariOdev2)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(VeriYapilariOdev2 main.cpp)
+add_executable(VeriYapilariOdev2 main.cpp Sayi.cpp Sayi.h)
