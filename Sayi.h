@@ -13,9 +13,10 @@ private:
 public:
     Sayi();
     ~Sayi();
+    void SetDeger(string);
     BagilListe* GetListe();
     string GetDeger();
-    static void SayilariAl(Sayi*);
+    static void SayilariAyir(Sayi*);
 };
 
 #endif //VERIYAPILARIODEV2_SAYI_H

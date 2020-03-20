@@ -12,13 +12,14 @@ BagilListe * Sayi::GetListe() {
     return liste;
 }
 
+void Sayi::SetDeger(string gelenDeger) {
+    deger = gelenDeger;
+}
+
 string Sayi::GetDeger() {
     return deger;
 }
 
-void Sayi::SayilariAl(Sayi* ptr) {
-    cout << "1. Sayiyi giriniz:";
-    cin >> ptr[0].deger;
-    cout << "2. Sayiyi giriniz:";
-    cin >> ptr[1].deger;
+void Sayi::SayilariAyir(Sayi* ptr) {
+
 }

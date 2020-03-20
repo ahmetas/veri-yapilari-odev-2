@@ -4,6 +4,10 @@ int Dugum::GetVeri() {
     return veri;
 }
 
-Dugum * Dugum::GetDugum() {
+void Dugum::SetVeri(int gelenVeri) {
+    veri = gelenVeri;
+}
+
+Dugum * Dugum::GetSonraki() {
     return sonraki;
 }

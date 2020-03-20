@@ -7,7 +7,6 @@ class Islem {
 private:
     Sayi* ptr2;
 public:
-    static void SayilariAyir(Sayi*);
 };
 
 #endif //VERIYAPILARIODEV2_ISLEM_H

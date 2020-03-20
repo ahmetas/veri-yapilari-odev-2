@@ -7,7 +7,8 @@ private:
     Dugum* sonraki;
 public:
     int GetVeri();
-    Dugum* GetDugum();
+    void SetVeri(int);
+    Dugum* GetSonraki();
 };
 
 #endif //VERIYAPILARIODEV2_DUGUM_H
