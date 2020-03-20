@@ -7,7 +7,9 @@ class BagilListe {
 private:
     Dugum* dugum;
 public:
+    Dugum* GetDugum();
     BagilListe();
+    ~BagilListe();
 };
 
 #endif //VERIYAPILARIODEV2_BAGILLISTE_H

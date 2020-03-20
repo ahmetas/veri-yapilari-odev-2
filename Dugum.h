@@ -2,8 +2,12 @@
 #define VERIYAPILARIODEV2_DUGUM_H
 
 class Dugum {
+private:
+    int veri;
+    Dugum* sonraki;
 public:
-    Dugum();
+    int GetVeri();
+    Dugum* GetDugum();
 };
 
 #endif //VERIYAPILARIODEV2_DUGUM_H

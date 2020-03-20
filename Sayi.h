@@ -8,11 +8,13 @@ using namespace std;
 
 class Sayi {
 private:
-    Sayi* ptrSayi;
     BagilListe* liste;
     string deger;
 public:
     Sayi();
+    ~Sayi();
+    BagilListe* GetListe();
+    string GetDeger();
     static void SayilariAl(Sayi*);
 };
 

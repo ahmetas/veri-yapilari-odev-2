@@ -1,5 +1,9 @@
 #include "Dugum.h"
 
-Dugum::Dugum() {
+int Dugum::GetVeri() {
+    return veri;
+}
 
+Dugum * Dugum::GetDugum() {
+    return sonraki;
 }
