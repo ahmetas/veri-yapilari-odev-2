@@ -4,8 +4,9 @@
 using namespace std;
 
 int main() {
-    Sayi s;
-    s.SayilariAl();
+    Sayi* ptrSayi = new Sayi[2];
+    Sayi::SayilariAl(ptrSayi);
 
+    delete []ptrSayi;
     return 0;
 }

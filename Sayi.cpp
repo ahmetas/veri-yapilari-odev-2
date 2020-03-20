@@ -1,8 +1,12 @@
 #include "Sayi.h"
 
-void Sayi::SayilariAl() {
+Sayi::Sayi(){
+    liste = new BagilListe();
+}
+
+void Sayi::SayilariAl(Sayi* ptr) {
     cout << "1. Sayiyi giriniz:";
-    cin >> sayi1;
+    cin >> ptr[0].deger;
     cout << "2. Sayiyi giriniz:";
-    cin >> sayi2;
+    cin >> ptr[1].deger;
 }

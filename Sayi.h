@@ -2,15 +2,18 @@
 #define VERIYAPILARIODEV2_SAYI_H
 
 #include <iostream>
+#include "BagilListe.h"
 
 using namespace std;
 
 class Sayi {
 private:
-    string sayi1;
-    string sayi2;
+    Sayi* ptrSayi;
+    BagilListe* liste;
+    string deger;
 public:
-    void SayilariAl();
+    Sayi();
+    static void SayilariAl(Sayi*);
 };
 
 #endif //VERIYAPILARIODEV2_SAYI_H
