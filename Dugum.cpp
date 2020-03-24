@@ -1,13 +1,18 @@
 #include "Dugum.h"
 
+Dugum::Dugum(int deger, Dugum* ptr) {
+    veri = deger;
+    sonraki = ptr;
+}
+
 int Dugum::GetVeri() {
     return veri;
 }
 
-void Dugum::SetVeri(int gelenVeri) {
-    veri = gelenVeri;
-}
-
 Dugum * Dugum::GetSonraki() {
     return sonraki;
+}
+
+void Dugum::SetSonraki(Dugum* ptrGelen) {
+    sonraki = ptrGelen;
 }

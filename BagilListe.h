@@ -5,10 +5,13 @@
 
 class BagilListe {
 private:
-    Dugum* dugum;
+    Dugum* baslangic;
+    int boyut = 0;
 public:
-    Dugum* GetDugum();
     BagilListe();
+    int AlBoyut();
+    void DugumEkle(int);
+    void ListeYazdir();
     ~BagilListe();
 };
 

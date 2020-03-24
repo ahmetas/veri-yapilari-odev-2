@@ -6,9 +6,10 @@ private:
     int veri;
     Dugum* sonraki;
 public:
+    Dugum(int, Dugum* = nullptr);
     int GetVeri();
-    void SetVeri(int);
     Dugum* GetSonraki();
+    void SetSonraki(Dugum*);
 };
 
 #endif //VERIYAPILARIODEV2_DUGUM_H
