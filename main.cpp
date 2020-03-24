@@ -22,9 +22,10 @@ int main() {
 
     for (int k = 0; k < adet; ++k) {
         cout << k + 1 << ". Liste:" << " ";
-        listeler[k]->ListeYazdir();
+        listeler[k]->ListeYazdir(listeler[k]);
         cout << endl;
     }
 
+    delete []listeler;
     return 0;
 }

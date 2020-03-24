@@ -1,17 +1,19 @@
 #include "BagilListe.h"
-#include <iostream>
-
-using namespace std;
 
 BagilListe::BagilListe(){
     baslangic = nullptr;
+}
+
+ostream &operator<<(ostream &os, const BagilListe &liste) {
+    os << liste.baslangic->GetVeri();
+    return os;
 }
 
 int BagilListe::AlBoyut() {
     return boyut;
 }
 
-void BagilListe::DugumEkle(int rakam) {
+void BagilListe::Ekle(int rakam) {
     if(baslangic == nullptr){
         baslangic = new Dugum(rakam);
         boyut++;
@@ -26,9 +28,9 @@ void BagilListe::DugumEkle(int rakam) {
     boyut++;
 }
 
-void BagilListe::ListeYazdir() {
+void BagilListe::ListeYazdir(BagilListe* liste) {
     for (int i = 0; i < boyut; ++i) {
-        cout << baslangic->GetVeri() << " ";
+        cout << *liste << " ";
         baslangic = baslangic->GetSonraki();
     }
 }
