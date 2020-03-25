@@ -22,5 +22,8 @@ int main() {
     cout << *listeler[0];
 
     delete []listeler;
+    for (int k = 0; k < adet; ++k) {
+        delete listeler[k];
+    }
     return 0;
 }

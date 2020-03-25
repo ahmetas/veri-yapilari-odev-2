@@ -40,5 +40,9 @@ void BagilListe::Ekle(int rakam) {
 }
 
 BagilListe::~BagilListe() {
+    Dugum* gezici = baslangic->GetSonraki();
+    for (int i = 0; i < boyut; ++i) {
+        delete gezici->GetSonraki();
+    }
     delete baslangic;
 }
