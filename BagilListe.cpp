@@ -17,6 +17,14 @@ int BagilListe::AlBoyut() {
     return boyut;
 }
 
+int BagilListe::AlVeri(int indeks) {
+    Dugum* gezici = baslangic;
+    for (int i = 0; i < boyut; ++i) {
+        gezici = gezici->GetSonraki();
+    }
+    return gezici->AlVeri();
+}
+
 void BagilListe::Ekle(int rakam) {
     if(baslangic == nullptr){
         baslangic = new Dugum(rakam);

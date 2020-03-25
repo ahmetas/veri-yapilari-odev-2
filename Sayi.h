@@ -10,6 +10,8 @@ class Sayi {
 private:
     BagilListe* liste;
 public:
+    BagilListe* toplam = nullptr;
+public:
     Sayi(BagilListe*);
     ~Sayi();
 };

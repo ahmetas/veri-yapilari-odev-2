@@ -14,6 +14,7 @@ public:
     friend ostream&operator<<(ostream& os, const BagilListe& liste);
     BagilListe();
     int AlBoyut();
+    int AlVeri(int);
     void Ekle(int);
     ~BagilListe();
 };
