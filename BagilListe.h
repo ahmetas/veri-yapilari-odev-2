@@ -8,14 +8,13 @@ using namespace std;
 
 class BagilListe {
 private:
-    Dugum* baslangic;
     int boyut = 0;
+    Dugum* baslangic;
 public:
     friend ostream&operator<<(ostream& os, const BagilListe& liste);
     BagilListe();
     int AlBoyut();
     void Ekle(int);
-    void ListeYazdir(BagilListe* liste);
     ~BagilListe();
 };
 

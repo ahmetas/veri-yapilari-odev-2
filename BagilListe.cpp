@@ -5,7 +5,11 @@ BagilListe::BagilListe(){
 }
 
 ostream &operator<<(ostream &os, const BagilListe &liste) {
-    os << liste.baslangic->GetVeri();
+    Dugum* gezici = liste.baslangic;
+    for(int i = 0; i < liste.boyut; i++) {
+        os << gezici->AlVeri();
+        gezici = gezici->GetSonraki();
+    }
     return os;
 }
 
@@ -19,20 +23,12 @@ void BagilListe::Ekle(int rakam) {
         boyut++;
         return;
     }
-
     Dugum* gezici = baslangic;
     for(int i = 0; i < boyut - 1; i++)
         gezici = gezici->GetSonraki();
 
     gezici->SetSonraki(new Dugum(rakam));
     boyut++;
-}
-
-void BagilListe::ListeYazdir(BagilListe* liste) {
-    for (int i = 0; i < boyut; ++i) {
-        cout << *liste << " ";
-        baslangic = baslangic->GetSonraki();
-    }
 }
 
 BagilListe::~BagilListe() {

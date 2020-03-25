@@ -8,8 +8,9 @@ using namespace std;
 
 class Sayi {
 private:
+    BagilListe* liste;
 public:
-    Sayi();
+    Sayi(BagilListe*);
     ~Sayi();
 };
 

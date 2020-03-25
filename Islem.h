@@ -6,7 +6,7 @@
 class Islem {
 private:
 public:
-    static void SayiListeOlustur(string, BagilListe*);
+    static BagilListe* SayiListeOlustur(string, BagilListe*);
 };
 
 #endif //VERIYAPILARIODEV2_ISLEM_H

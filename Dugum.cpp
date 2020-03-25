@@ -5,8 +5,12 @@ Dugum::Dugum(int deger, Dugum* ptr) {
     sonraki = ptr;
 }
 
-int Dugum::GetVeri() {
-    return veri;
+int Dugum::AlVeri() {
+    return this->veri;
+}
+
+void Dugum::SetVeri(int sayi) {
+    this->veri = sayi;
 }
 
 Dugum * Dugum::GetSonraki() {

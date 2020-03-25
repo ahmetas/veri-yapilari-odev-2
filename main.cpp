@@ -19,12 +19,7 @@ int main() {
         listeler[j] = new BagilListe();
         Islem::SayiListeOlustur(sayilar[j], listeler[j]);
     }
-
-    for (int k = 0; k < adet; ++k) {
-        cout << k + 1 << ". Liste:" << " ";
-        listeler[k]->ListeYazdir(listeler[k]);
-        cout << endl;
-    }
+    cout << *listeler[0];
 
     delete []listeler;
     return 0;

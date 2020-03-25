@@ -7,7 +7,8 @@ private:
     Dugum* sonraki;
 public:
     Dugum(int, Dugum* = nullptr);
-    int GetVeri();
+    void SetVeri(int);
+    int AlVeri();
     Dugum* GetSonraki();
     void SetSonraki(Dugum*);
 };

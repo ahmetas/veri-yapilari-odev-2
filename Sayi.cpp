@@ -1,6 +1,7 @@
 #include "Sayi.h"
 
-Sayi::Sayi(){
+Sayi::Sayi(BagilListe* liste){
+    this->liste = liste;
 }
 
 Sayi::~Sayi() {
