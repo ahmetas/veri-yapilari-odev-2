@@ -1,16 +1,7 @@
 #include "BagilListe.h"
 
-BagilListe::BagilListe(){
+BagilListe::BagilListe() {
     baslangic = nullptr;
-}
-
-ostream &operator<<(ostream &os, const BagilListe &liste) {
-    Dugum* gezici = liste.baslangic;
-    for(int i = 0; i < liste.boyut; i++) {
-        os << gezici->AlVeri();
-        gezici = gezici->GetSonraki();
-    }
-    return os;
 }
 
 int BagilListe::AlBoyut() {
@@ -18,31 +9,37 @@ int BagilListe::AlBoyut() {
 }
 
 int BagilListe::AlVeri(int indeks) {
-    Dugum* gezici = baslangic;
-    for (int i = 0; i < boyut; ++i) {
+    Dugum *gezici = baslangic;
+    for (int i = 0; i < indeks; ++i) {
         gezici = gezici->GetSonraki();
     }
     return gezici->AlVeri();
 }
 
 void BagilListe::Ekle(int rakam) {
-    if(baslangic == nullptr){
-        baslangic = new Dugum(rakam);
-        boyut++;
-        return;
-    }
-    Dugum* gezici = baslangic;
-    for(int i = 0; i < boyut - 1; i++)
+    Dugum *gezici = baslangic;
+    for (int i = 0; i < boyut - 1; i++) {
         gezici = gezici->GetSonraki();
+    }
 
-    gezici->SetSonraki(new Dugum(rakam));
+    if (gezici == nullptr) {
+        baslangic = new Dugum(rakam);
+    } else {
+        gezici->SetSonraki(new Dugum(rakam));
+    }
+
     boyut++;
 }
 
-BagilListe::~BagilListe() {
-    Dugum* gezici = baslangic->GetSonraki();
+void BagilListe::Temizle() {
     for (int i = 0; i < boyut; ++i) {
-        delete gezici->GetSonraki();
+        Dugum *gecici = baslangic->GetSonraki();
+        delete baslangic;
+        baslangic = gecici;
     }
-    delete baslangic;
+    boyut = 0;
+}
+
+BagilListe::~BagilListe() {
+    Temizle();
 }

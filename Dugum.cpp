@@ -9,10 +9,6 @@ int Dugum::AlVeri() {
     return this->veri;
 }
 
-void Dugum::SetVeri(int sayi) {
-    this->veri = sayi;
-}
-
 Dugum * Dugum::GetSonraki() {
     return sonraki;
 }

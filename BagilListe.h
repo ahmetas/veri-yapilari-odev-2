@@ -11,11 +11,11 @@ private:
     int boyut = 0;
     Dugum* baslangic;
 public:
-    friend ostream&operator<<(ostream& os, const BagilListe& liste);
     BagilListe();
     int AlBoyut();
     int AlVeri(int);
     void Ekle(int);
+    void Temizle();
     ~BagilListe();
 };
 

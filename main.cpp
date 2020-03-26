@@ -8,22 +8,29 @@ int main() {
     int adet;
     cout << "Toplanacak sayi adedini giriniz:";
     cin >> adet;
-    string sayilar[adet];
+    string girdiler[adet];
     for (int i = 0; i < adet; ++i) {
         cout << i + 1 << ". Sayiyi giriniz:";
-        cin >> sayilar[i];
+        cin >> girdiler[i];
     }
 
     BagilListe** listeler = new BagilListe*[adet];
     for (int j = 0; j < adet; ++j) {
         listeler[j] = new BagilListe();
-        Islem::SayiListeOlustur(sayilar[j], listeler[j]);
+        Islem::SayiListeOlustur(girdiler[j], listeler[j]);
     }
-    cout << *listeler[0];
 
-    delete []listeler;
+    Sayi** sayilar = new Sayi*[adet];
+    for (int i = 0; i < adet; ++i) {
+        sayilar[i] = new Sayi(listeler[i]);
+        if (i > 0)
+            *sayilar[0] += *sayilar[i];
+    }
+    cout << *sayilar[0];
+
     for (int k = 0; k < adet; ++k) {
         delete listeler[k];
     }
+    delete []listeler;
     return 0;
 }
